@@ -1,9 +1,9 @@
 {
-  "lastRunAt": "2026-07-08T18:59:19.052Z",
+  "lastRunAt": "2026-07-08T19:04:08.843Z",
   "sourcesAttempted": 4,
   "sourcesSucceeded": 4,
   "articlesFound": 221,
-  "articlesUsed": 0,
+  "articlesUsed": 15,
   "sourceResults": [
     {
       "name": "CafeF Thị trường",
@@ -26,7 +26,5 @@
       "articleCount": 61
     }
   ],
-  "errors": [
-    "Analyzer/Writer: Analyzer: không tìm thấy JSON trong phản hồi"
-  ]
+  "errors": []
 }
