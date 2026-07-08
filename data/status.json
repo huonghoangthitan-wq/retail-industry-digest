@@ -1,0 +1,32 @@
+{
+  "lastRunAt": "2026-07-08T18:59:19.052Z",
+  "sourcesAttempted": 4,
+  "sourcesSucceeded": 4,
+  "articlesFound": 221,
+  "articlesUsed": 0,
+  "sourceResults": [
+    {
+      "name": "CafeF Thị trường",
+      "ok": true,
+      "articleCount": 50
+    },
+    {
+      "name": "VnExpress Kinh doanh",
+      "ok": true,
+      "articleCount": 60
+    },
+    {
+      "name": "VnEconomy Tiêu dùng",
+      "ok": true,
+      "articleCount": 50
+    },
+    {
+      "name": "CafeBiz Bán lẻ",
+      "ok": true,
+      "articleCount": 61
+    }
+  ],
+  "errors": [
+    "Analyzer/Writer: Analyzer: không tìm thấy JSON trong phản hồi"
+  ]
+}
