@@ -16,20 +16,36 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Vừa chạy thủ công 2026-07-09, nên bỏ qua lần lịch tự động 2026-07-10 để tránh
+      # cập nhật lại quá sớm — lịch tự động tiếp tục bình thường từ 2026-07-17. Kích
+      # hoạt thủ công qua "Run workflow" luôn bỏ qua điều kiện này.
+      - name: Check start date
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(date -u +%F)" \> "2026-07-16" ]; then
+            echo "proceed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Setup Node
+        if: steps.gate.outputs.proceed == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
       - name: Install dependencies
+        if: steps.gate.outputs.proceed == 'true'
         run: npm ci
 
       - name: Run pipeline
+        if: steps.gate.outputs.proceed == 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: npm run pipeline
 
       - name: Commit and push data
+        if: steps.gate.outputs.proceed == 'true'
         run: |
           git config user.name "retail-digest-bot"
           git config user.email "actions@users.noreply.github.com"
