@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Tin tức Ngành Bán Lẻ",
-  description: "Bản tóm tắt tin tức ngành bán lẻ, tự động cập nhật mỗi ngày.",
+  description: "Bản tóm tắt tin tức ngành bán lẻ, tự động cập nhật vào sáng thứ Sáu hàng tuần.",
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
               Tin tức Ngành Bán Lẻ
             </a>
             <p className="mt-1 text-sm text-slate-500">
-              Tóm tắt tự động mỗi ngày từ các nguồn tin trong nước
+              Tóm tắt tự động mỗi tuần (sáng thứ Sáu) từ các nguồn tin trong nước
             </p>
           </div>
         </header>

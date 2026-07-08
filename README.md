@@ -1,7 +1,7 @@
 # Tin tức Ngành Bán Lẻ
 
-Trang tin công khai, tự động thu thập tin tức ngành bán lẻ Việt Nam mỗi ngày, lọc/phân
-tích và viết tóm tắt bằng AI (Claude).
+Trang tin công khai, tự động thu thập tin tức ngành bán lẻ Việt Nam mỗi tuần (sáng thứ Sáu),
+lọc/phân tích và viết tóm tắt bằng AI (Claude).
 
 ## Kiến trúc: Core + Module
 
@@ -71,12 +71,13 @@ npm run dev                  # xem trang web tại http://localhost:3000
 2. Import repo vào Vercel — Vercel tự build & deploy mỗi khi có commit mới trên `main`.
 3. Trong repo GitHub, vào **Settings → Secrets and variables → Actions**, thêm secret
    `ANTHROPIC_API_KEY`.
-4. Workflow `.github/workflows/daily-digest.yml` sẽ tự chạy mỗi ngày lúc 06:00 giờ Việt Nam,
-   commit dữ liệu mới → Vercel tự deploy lại. Có thể chạy thử thủ công qua tab
-   **Actions → Daily retail digest → Run workflow**.
+4. Workflow `.github/workflows/weekly-digest.yml` sẽ tự chạy vào sáng thứ Sáu hàng tuần lúc
+   06:00 giờ Việt Nam, commit dữ liệu mới → Vercel tự deploy lại. Có thể chạy thử thủ công qua
+   tab **Actions → Weekly retail digest → Run workflow**. Lưu ý: lịch cron của GitHub Actions
+   chỉ là "best-effort", có thể trễ vài phút đến vài chục phút so với giờ đặt.
 
 ## Mở rộng sau này (không thuộc MVP)
 
 - Cảnh báo qua Slack/Zalo thay vì chỉ email GitHub mặc định — thêm 1 bước trong workflow.
-- Chạy nhiều lần/ngày.
+- Chạy dày hơn (hàng ngày) nếu sau này thấy tần suất tin tức cần cập nhật nhanh hơn.
 - Thêm module lưu trữ khác (DB) nếu lượng dữ liệu vượt quá mức phù hợp cho JSON-in-repo.

@@ -1,9 +1,9 @@
-name: Daily retail digest
+name: Weekly retail digest
 
 on:
   schedule:
-    # 23:00 UTC = 06:00 giờ Việt Nam (UTC+7)
-    - cron: "0 23 * * *"
+    # 23:00 UTC thứ Năm = 06:00 giờ Việt Nam thứ Sáu (UTC+7)
+    - cron: "0 23 * * 4"
   workflow_dispatch: {}
 
 permissions:
