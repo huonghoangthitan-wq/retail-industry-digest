@@ -1,9 +1,9 @@
 {
-  "lastRunAt": "2026-07-08T23:39:54.172Z",
+  "lastRunAt": "2026-07-17T07:29:59.200Z",
   "sourcesAttempted": 4,
   "sourcesSucceeded": 4,
   "articlesFound": 221,
-  "articlesUsed": 15,
+  "articlesUsed": 0,
   "sourceResults": [
     {
       "name": "CafeF Thị trường",
@@ -26,5 +26,7 @@
       "articleCount": 61
     }
   ],
-  "errors": []
+  "errors": [
+    "Analyzer/Writer: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}"
+  ]
 }
