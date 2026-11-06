@@ -1,5 +1,5 @@
 {
-  "lastRunAt": "2026-10-30T02:23:00.653Z",
+  "lastRunAt": "2026-11-06T03:05:08.979Z",
   "sourcesAttempted": 4,
   "sourcesSucceeded": 4,
   "articlesFound": 221,
@@ -27,6 +27,6 @@
     }
   ],
   "errors": [
-    "Analyzer/Writer: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgXdFCCz6fZrPtb53QnX1\"}"
+    "Analyzer/Writer: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgkw7yafXZYHFMwh4641i\"}"
   ]
 }
