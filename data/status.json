@@ -1,8 +1,8 @@
 {
-  "lastRunAt": "2026-11-06T03:05:08.979Z",
+  "lastRunAt": "2026-11-13T03:06:56.326Z",
   "sourcesAttempted": 4,
-  "sourcesSucceeded": 4,
-  "articlesFound": 221,
+  "sourcesSucceeded": 3,
+  "articlesFound": 161,
   "articlesUsed": 0,
   "sourceResults": [
     {
@@ -12,8 +12,9 @@
     },
     {
       "name": "VnExpress Kinh doanh",
-      "ok": true,
-      "articleCount": 60
+      "ok": false,
+      "articleCount": 0,
+      "error": "Status code 503"
     },
     {
       "name": "VnEconomy Tiêu dùng",
@@ -27,6 +28,7 @@
     }
   ],
   "errors": [
-    "Analyzer/Writer: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cgkw7yafXZYHFMwh4641i\"}"
+    "VnExpress Kinh doanh: Status code 503",
+    "Analyzer/Writer: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgzBvJMyi1QchmWc5prmZ\"}"
   ]
 }
